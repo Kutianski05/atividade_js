@@ -16,12 +16,16 @@ function criar_cartao(categoria, pergunta, resposta){
     `
 
     container.appendChild(cartao)
-    const botao = document.getElementById("btnAdicionar");
+}
 
-botao.addEventListener("click", function() {
-    const categoria = prompt("Digite a categoria:");
-    const pergunta = prompt("Digite a pergunta:");
-    const resposta = prompt("Digite a resposta:");
-    criar_cartao(categoria, pergunta, resposta);
-});
+function adicionarNovoCard() {
+  let categoria = prompt("Digite a categoria do card:");
+    let pergunta = prompt("Digite a pergunta do card:");
+    let resposta = prompt("Digite a resposta do card:");
+
+    if (categoria && pergunta && resposta) {
+        criar_cartao(categoria, pergunta, resposta);
+    } else {
+        alert("Por favor, preencha todos os campos para criar um novo card.");
+    }
 }
