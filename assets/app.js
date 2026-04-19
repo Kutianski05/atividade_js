@@ -14,6 +14,9 @@ function criar_cartao(categoria, pergunta, resposta){
                 </div>
             </div>
     `
+    cartao.addEventListener("click", function() {
+    cartao.classList.toggle("ativo");
+});
 
     container.appendChild(cartao)
 }
